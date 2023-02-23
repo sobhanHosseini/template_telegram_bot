@@ -17,9 +17,8 @@ class Bot:
         self.bot.infinity_polling()
     
     def echo_all(self, message):
-        # write_json(message.json, 'message.json')
-		self.bot.send_message(message.chat.id, message.text)
-
+        self.bot.send_message(message.chat.id, message.text)
+		
 if __name__ == '__main__':
 	logger.info('Bot Started')
 	bot = Bot()
