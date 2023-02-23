@@ -4,11 +4,9 @@ import telebot
 from loguru import logger
 
 from src.utils.io import write_json
-from src.dataClass import keyboards
+from src.dataClass import keyboards as kb
 
 class Bot:
-    
-    keyboars = keyboards.Keyboards()
     
     def __init__(self) -> None:
         self.bot = telebot.TeleBot(os.environ['ANONYMOUS_BOT_TOKEN'])
@@ -19,10 +17,10 @@ class Bot:
         self.bot.infinity_polling()
     
     def echo_all(self, message):
-        keyboards = keyboard()
+        keyboards = kb.keyboards() 
         self.bot.send_message(
             message.chat.id, message.text,
-            reply_markup=keyboars.main
+            reply_markup=keyboards.main
             )
 		
 if __name__ == '__main__':
