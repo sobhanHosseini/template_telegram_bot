@@ -17,7 +17,7 @@ class Bot:
         self.bot.infinity_polling()
     
     def echo_all(self, message):
-        keyboards = kb.keyboards() 
+        keyboards = kb.Keyboards() 
         self.bot.send_message(
             message.chat.id, message.text,
             reply_markup=keyboards.main
