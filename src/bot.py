@@ -3,11 +3,14 @@ import os
 import telebot
 from loguru import logger
 
-from src.utils.io import write_json
 from src.dataClass import keyboards as kb
+from src.utils.io import write_json
+
 
 class Bot:
-    
+    """
+    Telegram bot to randomly connect two strangers to talk!
+    """
     def __init__(self) -> None:
         self.bot = telebot.TeleBot(os.environ['ANONYMOUS_BOT_TOKEN'])
         self.echo_all = self.bot.message_handler(func=lambda message: True)(self.echo_all)
