@@ -9,5 +9,5 @@ export PYTHONPATH=${PWD}
 ```
 Then run:
 ```
-python src/bot.py
+python src/run.py
 ```
