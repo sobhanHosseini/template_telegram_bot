@@ -2,5 +2,5 @@ from dataclasses import dataclass
 
 @dataclass
 class Keys:
-    random_connect:str = 'Random Connect'
-    setting:str = 'Settings'
+    random_connect:str = ':bust_in_silhouette: Random Connect'
+    setting:str = ':gear: Settings'

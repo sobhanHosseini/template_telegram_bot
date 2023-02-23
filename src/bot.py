@@ -21,7 +21,7 @@ class Bot:
         
         self.bot.send_message(
             message.chat.id, message.text,
-            reply_markup=kb.create_keyboard(message.chat.first_name)
+            reply_markup=keyboards.main
             )
 		
 if __name__ == '__main__':
