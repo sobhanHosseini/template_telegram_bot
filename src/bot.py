@@ -18,9 +18,10 @@ class Bot:
     
     def echo_all(self, message):
         keyboards = kb.Keyboards() 
+        
         self.bot.send_message(
             message.chat.id, message.text,
-            reply_markup=keyboards.main
+            reply_markup=kb.create_keyboard(message.chat.first_name)
             )
 		
 if __name__ == '__main__':
